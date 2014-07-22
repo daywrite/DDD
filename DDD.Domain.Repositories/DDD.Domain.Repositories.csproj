@@ -47,15 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntityFramework\DddDbContext.cs" />
+    <Compile Include="EntityFramework\EFRepositority\EFRepository.cs" />
+    <Compile Include="EntityFramework\EFRepositority\EFRepositoryContext.cs" />
+    <Compile Include="EntityFramework\EFRepositority\IEFRepositoryContext.cs" />
+    <Compile Include="EntityFramework\EntityRepositories\UserRepository.cs" />
+    <Compile Include="EntityFramework\Extensions\DbContextExtensions.cs" />
     <Compile Include="EntityFramework\Migrations\Configuration.cs" />
     <Compile Include="EntityFramework\Migrations\CreateDatabaseIfNotExistsWithSeed.cs" />
     <Compile Include="EntityFramework\Migrations\DatabaseInitializer.cs" />
     <Compile Include="EntityFramework\ModelConfigurations\UserTypeConfiguration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="EntityFramework\EFRepositority\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
@@ -65,6 +68,13 @@
       <Project>{42b80bbb-ab3d-4ca4-b210-516e470fcb08}</Project>
       <Name>DDD.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DDD.Infrastructure\DDD.Infrastructure.csproj">
+      <Project>{1a2c8b18-d278-41bb-9433-8cbc0df21982}</Project>
+      <Name>DDD.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

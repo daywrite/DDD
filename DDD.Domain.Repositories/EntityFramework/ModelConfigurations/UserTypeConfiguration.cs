@@ -1,4 +1,4 @@
-﻿using DDD.Domain.Models.Entities;
+﻿using DDD.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DDD.Domain.Repositories.EntityFramework.ModelConfigurations
+namespace DDD.Domain.Repositories.EntityFramework
 {
     public class UserTypeConfiguration : EntityTypeConfiguration<User>
     {

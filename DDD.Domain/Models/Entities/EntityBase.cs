@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DDD.Domain.Models.Entities
+namespace DDD.Domain.Models
 {
     /// <summary>
     /// 可持久化到数据库的数据模型基类

@@ -1,5 +1,5 @@
-﻿using DDD.Domain.Models.Entities;
-using DDD.Domain.Repositories.EntityFramework.ModelConfigurations;
+﻿using DDD.Domain.Models;
+using DDD.Domain.Repositories.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

@@ -1,4 +1,4 @@
-﻿using DDD.Domain.Models.Entities;
+﻿using DDD.Domain.Models;
 using DDD.Infrastructure;
 using System;
 using System.Collections.Generic;
@@ -6,12 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DDD.Domain.Repositories.BaseRepositority
+namespace DDD.Domain.Repositories
 {
     /// <summary>
     /// 表示实现该接口的类型是仓储上下文。
     /// </summary>
-    public interface IRepositoryContext : IUnitOfWork, IDisposable
+    public interface IRepositoryContext : IUnitOfWork, IDisposable, IDependency
     {
         #region 方法
 

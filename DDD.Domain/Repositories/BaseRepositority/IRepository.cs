@@ -1,11 +1,11 @@
-﻿using DDD.Domain.Models.Entities;
+﻿using DDD.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DDD.Domain.Repositories.BaseRepositority
+namespace DDD.Domain.Repositories
 {
     /// <summary>
     /// 表示实现该接口的类型是应用于某种实体的仓储类型。

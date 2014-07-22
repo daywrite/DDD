@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DDD.Domain.Repositories.EntityFramework.Migrations
+namespace DDD.Domain.Repositories.EntityFramework
 {
     /// <summary>
     /// 在数据库不存在时使用种子数据创建数据库

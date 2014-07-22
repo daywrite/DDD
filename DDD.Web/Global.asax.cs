@@ -1,4 +1,4 @@
-﻿using DDD.Domain.Repositories.EntityFramework.Migrations;
+﻿using DDD.Domain.Repositories.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,9 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-
+using DDD.Infrastructure;
+using Autofac;
+using Autofac.Integration.Mvc; 
 namespace DDD.Web
 {
     // 注意: 有关启用 IIS6 或 IIS7 经典模式的说明，
@@ -27,6 +29,9 @@ namespace DDD.Web
 
             //数据库生成初始入口
             DatabaseInitializer.Initialize();
+            //Ioc注入
+            var builder = AutofacHelper.RegisterService();
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(builder.Build()));
         }
     }
 }

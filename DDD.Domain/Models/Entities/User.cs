@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DDD.Domain.Models.Entities
+namespace DDD.Domain.Models
 {
     public class User : EntityBase<Guid>
     {

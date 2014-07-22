@@ -1,11 +1,11 @@
-﻿using DDD.Domain.Models.Entities;
+﻿using DDD.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DDD.Domain.Repositories.BaseRepositority
+namespace DDD.Domain.Repositories
 {
     public abstract class Repository<TEntity, TKey> : IRepository<TEntity, TKey> where TEntity : EntityBase<TKey>
     {

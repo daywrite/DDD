@@ -39,6 +39,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.3.5.0\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DDDSolution\DevelopSolution\packages\Autofac.Mvc4.3.1.0\lib\net40\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
@@ -312,10 +320,25 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DDD.Application\DDD.Application.csproj">
+      <Project>{3fb6e838-e9f5-4bae-a7fa-9575f9c896b3}</Project>
+      <Name>DDD.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DDD.Domain.Repositories\DDD.Domain.Repositories.csproj">
       <Project>{a2c3c47a-e695-4a49-a071-9c251d6ac52b}</Project>
       <Name>DDD.Domain.Repositories</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DDD.Domain\DDD.Domain.csproj">
+      <Project>{42b80bbb-ab3d-4ca4-b210-516e470fcb08}</Project>
+      <Name>DDD.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DDD.Infrastructure\DDD.Infrastructure.csproj">
+      <Project>{1a2c8b18-d278-41bb-9433-8cbc0df21982}</Project>
+      <Name>DDD.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

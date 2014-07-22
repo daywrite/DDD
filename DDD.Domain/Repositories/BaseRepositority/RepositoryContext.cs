@@ -1,16 +1,17 @@
-﻿using DDD.Domain.Models.Entities;
+﻿using DDD.Domain.Models;
+using DDD.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DDD.Domain.Repositories.BaseRepositority
+namespace DDD.Domain.Repositories
 {
     /// <summary>
     /// 单元操作实现基类
     /// </summary>
-    public abstract class RepositoryContext : IRepositoryContext
+    public abstract class RepositoryContext : DisposableObject, IRepositoryContext
     {
         #region 受保护的方法
 
@@ -82,7 +83,12 @@ namespace DDD.Domain.Repositories.BaseRepositority
         /// <summary>
         /// Dispose
         /// </summary>
-        public abstract void Dispose();
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {               
+            }
+        }
 
         #endregion
     }

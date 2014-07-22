@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DDD.Domain.Repositories.EntityFramework.Migrations
+namespace DDD.Domain.Repositories.EntityFramework
 {
     /// <summary>
     /// 数据库初始化操作类
