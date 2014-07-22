@@ -3,8 +3,52 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{2AC0DFDC-981C-4F24-A4A3-619A5EB4B125}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{805F0C23-21CF-4298-BC14-57CC433FC09F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{9FB6A865-EE30-4D4A-8B81-57D5AEFE3AF8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{FFDB3823-6EB5-47E1-8872-A1171D6967B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.Domain", "DDD.Domain\DDD.Domain.csproj", "{42B80BBB-AB3D-4CA4-B210-516E470FCB08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.Infrastructure", "DDD.Infrastructure\DDD.Infrastructure.csproj", "{1A2C8B18-D278-41BB-9433-8CBC0DF21982}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.Domain.Repositories", "DDD.Domain.Repositories\DDD.Domain.Repositories.csproj", "{A2C3C47A-E695-4A49-A071-9C251D6AC52B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.Web", "DDD.Web\DDD.Web.csproj", "{DD5AC7AE-E70E-4F07-96B1-6EF69E442305}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42B80BBB-AB3D-4CA4-B210-516E470FCB08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42B80BBB-AB3D-4CA4-B210-516E470FCB08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42B80BBB-AB3D-4CA4-B210-516E470FCB08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42B80BBB-AB3D-4CA4-B210-516E470FCB08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A2C8B18-D278-41BB-9433-8CBC0DF21982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A2C8B18-D278-41BB-9433-8CBC0DF21982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A2C8B18-D278-41BB-9433-8CBC0DF21982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A2C8B18-D278-41BB-9433-8CBC0DF21982}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2C3C47A-E695-4A49-A071-9C251D6AC52B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2C3C47A-E695-4A49-A071-9C251D6AC52B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2C3C47A-E695-4A49-A071-9C251D6AC52B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2C3C47A-E695-4A49-A071-9C251D6AC52B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD5AC7AE-E70E-4F07-96B1-6EF69E442305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD5AC7AE-E70E-4F07-96B1-6EF69E442305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD5AC7AE-E70E-4F07-96B1-6EF69E442305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD5AC7AE-E70E-4F07-96B1-6EF69E442305}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{42B80BBB-AB3D-4CA4-B210-516E470FCB08} = {805F0C23-21CF-4298-BC14-57CC433FC09F}
+		{A2C3C47A-E695-4A49-A071-9C251D6AC52B} = {805F0C23-21CF-4298-BC14-57CC433FC09F}
+		{1A2C8B18-D278-41BB-9433-8CBC0DF21982} = {9FB6A865-EE30-4D4A-8B81-57D5AEFE3AF8}
+		{DD5AC7AE-E70E-4F07-96B1-6EF69E442305} = {FFDB3823-6EB5-47E1-8872-A1171D6967B8}
 	EndGlobalSection
 EndGlobal
