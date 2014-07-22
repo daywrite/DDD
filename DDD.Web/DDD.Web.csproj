@@ -332,6 +332,10 @@
       <Project>{42b80bbb-ab3d-4ca4-b210-516e470fcb08}</Project>
       <Name>DDD.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DDD.Infrastructure.Caching\DDD.Infrastructure.Caching.csproj">
+      <Project>{fd9b3e8e-c5d3-4584-837c-fd8a885ebe55}</Project>
+      <Name>DDD.Infrastructure.Caching</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DDD.Infrastructure\DDD.Infrastructure.csproj">
       <Project>{1a2c8b18-d278-41bb-9433-8cbc0df21982}</Project>
       <Name>DDD.Infrastructure</Name>

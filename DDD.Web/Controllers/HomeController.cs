@@ -5,18 +5,22 @@ using System.Web;
 using System.Web.Mvc;
 using DDD.Domain.Models;
 using DDD.Application.Imple;
+using DDD.Infrastructure.Caching;
 namespace DDD.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IUserService userService;
+        private readonly IUserService _userService;
+        //private readonly ICacheProvider _cacheProvider;
         public HomeController(IUserService userService)
         {
-            this.userService = userService;
+            this._userService = userService;
         }
         public ActionResult Index()
         {
-            //User u = userService.GetByKey(new Guid("be8c6f0a-5b11-e411-b59f-446d57c14a18"));
+            //User u = _userService.GetByKey(new Guid("be8c6f0a-5b11-e411-b59f-446d57c14a18"));
+            //_cacheProvider.Add("user", "u", u);
+            //User _u = (User)_cacheProvider.Get("user", "u");
 
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 

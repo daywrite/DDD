@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Autofac\AutofacHelper.cs" />
+    <Compile Include="Caching\ICacheProvider.cs" />
     <Compile Include="DisposableObject.cs" />
     <Compile Include="Autofac\IDependency.cs" />
     <Compile Include="IUnitOfWork.cs" />
