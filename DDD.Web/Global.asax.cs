@@ -10,6 +10,7 @@ using System.Web.Routing;
 using DDD.Infrastructure;
 using Autofac;
 using Autofac.Integration.Mvc; 
+using log4net;
 namespace DDD.Web
 {
     // 注意: 有关启用 IIS6 或 IIS7 经典模式的说明，
