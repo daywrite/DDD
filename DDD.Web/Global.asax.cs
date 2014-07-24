@@ -32,6 +32,9 @@ namespace DDD.Web
             DatabaseInitializer.Initialize();
             //Ioc注入
             var builder = AutofacHelper.RegisterService();
+            //MongoDB
+            builder.RegisterType<DDD.Domain.Repositories.MongoDB.MongoDBRepositoryContext>().AsImplementedInterfaces();
+            builder.RegisterType<DDD.Domain.Repositories.MongoDB.UserRepository>().AsImplementedInterfaces();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(builder.Build()));
         }
     }

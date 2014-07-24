@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A2C3C47A-E695-4A49-A071-9C251D6AC52B}</ProjectGuid>
+    <ProjectGuid>{B43BD667-CE46-4195-A260-4843E32F28D7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DDD.Domain.Repositories</RootNamespace>
-    <AssemblyName>DDD.Domain.Repositories</AssemblyName>
+    <RootNamespace>DDD.Domain.Repositories.Tests</RootNamespace>
+    <AssemblyName>DDD.Domain.Repositories.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,20 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="MongoDB.Bson">
-      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Bson.dll</HintPath>
-    </Reference>
-    <Reference Include="MongoDB.Driver">
-      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Driver.dll</HintPath>
+    <Reference Include="nunit.framework, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SharedLib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,30 +47,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntityFramework\DddDbContext.cs" />
-    <Compile Include="EntityFramework\EFRepositority\EFRepository.cs" />
-    <Compile Include="EntityFramework\EFRepositority\EFRepositoryContext.cs" />
-    <Compile Include="EntityFramework\EFRepositority\IEFRepositoryContext.cs" />
-    <Compile Include="EntityFramework\EntityRepositories\UserRepository.cs" />
-    <Compile Include="EntityFramework\Extensions\DbContextExtensions.cs" />
-    <Compile Include="EntityFramework\Migrations\Configuration.cs" />
-    <Compile Include="EntityFramework\Migrations\CreateDatabaseIfNotExistsWithSeed.cs" />
-    <Compile Include="EntityFramework\Migrations\DatabaseInitializer.cs" />
-    <Compile Include="EntityFramework\ModelConfigurations\UserTypeConfiguration.cs" />
-    <Compile Include="MongoDB\EntityRepositories\UserRepository.cs" />
-    <Compile Include="MongoDB\MongoDBRepositority\IMongoDBRepositoryContext.cs" />
-    <Compile Include="MongoDB\MongoDBRepositority\IMongoDBRepositoryContextSettings.cs" />
-    <Compile Include="MongoDB\MongoDBRepositority\MongoDBRepository.cs" />
-    <Compile Include="MongoDB\MongoDBRepositority\MongoDBRepositoryContext.cs" />
-    <Compile Include="MongoDB\MongoDBRepositority\MongoDBRepositoryContextSettings.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="MongoDB\UserTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\DDD.Domain.Repositories\DDD.Domain.Repositories.csproj">
+      <Project>{a2c3c47a-e695-4a49-a071-9c251d6ac52b}</Project>
+      <Name>DDD.Domain.Repositories</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DDD.Domain\DDD.Domain.csproj">
       <Project>{42b80bbb-ab3d-4ca4-b210-516e470fcb08}</Project>
       <Name>DDD.Domain</Name>
@@ -85,9 +65,7 @@
       <Name>DDD.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

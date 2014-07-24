@@ -25,6 +25,7 @@ namespace DDD.Infrastructure
             builder.RegisterAssemblyTypes(assemblys.ToArray())
                    .Where(t => baseType.IsAssignableFrom(t) && t != baseType)
                    .AsImplementedInterfaces().InstancePerLifetimeScope();
+            
             return builder;
         }
     }

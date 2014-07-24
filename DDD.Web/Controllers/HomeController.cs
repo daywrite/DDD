@@ -9,7 +9,6 @@ using DDD.Infrastructure.Caching;
 using log4net;
 using System.Reflection;
 
-[assembly: log4net.Config.XmlConfigurator(Watch = true)]
 namespace DDD.Web.Controllers
 {
     public class HomeController : Controller
@@ -24,7 +23,7 @@ namespace DDD.Web.Controllers
         {
             
 
-            //User u = _userService.GetByKey(new Guid("be8c6f0a-5b11-e411-b59f-446d57c14a18"));
+            User u = _userService.GetByKey(new Guid("be8c6f0a-5b11-e411-b59f-446d57c14a18"));
             //_cacheProvider.Add("user", "u", u);
             //User _u = (User)_cacheProvider.Get("user", "u");
 

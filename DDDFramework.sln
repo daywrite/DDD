@@ -36,6 +36,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedLib", "SharedLib", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDB.Tests", "MongoDB.Tests\MongoDB.Tests.csproj", "{7FF7E460-B19D-4717-A687-C18671A3DB94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.Domain.Repositories.Tests", "DDD.Domain.Repositories.Tests\DDD.Domain.Repositories.Tests.csproj", "{B43BD667-CE46-4195-A260-4843E32F28D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,6 +80,10 @@ Global
 		{7FF7E460-B19D-4717-A687-C18671A3DB94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FF7E460-B19D-4717-A687-C18671A3DB94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FF7E460-B19D-4717-A687-C18671A3DB94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B43BD667-CE46-4195-A260-4843E32F28D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B43BD667-CE46-4195-A260-4843E32F28D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B43BD667-CE46-4195-A260-4843E32F28D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B43BD667-CE46-4195-A260-4843E32F28D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +98,7 @@ Global
 		{DD5AC7AE-E70E-4F07-96B1-6EF69E442305} = {FFDB3823-6EB5-47E1-8872-A1171D6967B8}
 		{202B36E2-E4DC-4C27-AC5A-DADD7AC2468B} = {63CB073D-6EAD-413B-8682-02906FBB26C8}
 		{7FF7E460-B19D-4717-A687-C18671A3DB94} = {63CB073D-6EAD-413B-8682-02906FBB26C8}
+		{B43BD667-CE46-4195-A260-4843E32F28D7} = {63CB073D-6EAD-413B-8682-02906FBB26C8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35;packages\Unity.Interception.2.1.505.2\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Caching.5.0.505.0\lib\NET35
