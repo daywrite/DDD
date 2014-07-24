@@ -34,10 +34,9 @@ namespace DDD.Domain.Repositories.MongoDB
         /// <returns> 符合编号的记录，不存在返回null </returns>
         protected override TEntity DoGetByKey(TKey key)
         {
-            MongoCollection collection = _mongoDBRepositoryContext.GetCollectionForType<TEntity>("User");
+            MongoCollection collection = _mongoDBRepositoryContext.GetCollectionForType<TEntity>(typeof(TEntity));
             //return collection.AsQueryable<TAggregateRoot>().Where(p => p.ID == id).First();
-            long count = collection.Count();
-            return null;
+            return collection.FindAllAs<TEntity>().First();          
         }
 
         protected override IEnumerable<TEntity> DoGetAll()

@@ -26,10 +26,18 @@ namespace DDD.Domain.Repositories.MongoDB
         {
             get { return _settings; }
         }
-        public MongoCollection GetCollectionForType<TEntity>(string collection)
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="TEntity"></typeparam>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public MongoCollection GetCollectionForType<TEntity>(Type type)
         {
             MongoCollection mongoCollection = null;
-            mongoCollection = this._database.GetCollection<TEntity>(collection);
+            mongoCollection = this._database.GetCollection<TEntity>(type.Name);
+
             return mongoCollection;
         }
         protected override void Dispose(bool disposing)

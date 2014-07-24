@@ -12,6 +12,11 @@ namespace DDD.Domain.Repositories.MongoDB
     {
         IMongoDBRepositoryContextSettings Settings { get; }
 
-        MongoCollection GetCollectionForType<TEntity>(string collection);
+        /// <summary>
+        /// Gets the <see cref="MongoCollection"/> instance by the given <see cref="Type"/>.
+        /// </summary>
+        /// <param name="type">The <see cref="Type"/> object.</param>
+        /// <returns>The <see cref="MongoCollection"/> instance.</returns>
+        MongoCollection GetCollectionForType<TEntity>(Type type);
     }
 }
