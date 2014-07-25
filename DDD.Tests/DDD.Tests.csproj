@@ -34,6 +34,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -51,12 +57,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EFSqlToMongoDB\EFToDB.cs" />
     <Compile Include="LogTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DDD.Domain.Repositories\DDD.Domain.Repositories.csproj">
+      <Project>{a2c3c47a-e695-4a49-a071-9c251d6ac52b}</Project>
+      <Name>DDD.Domain.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DDD.Domain\DDD.Domain.csproj">
+      <Project>{42b80bbb-ab3d-4ca4-b210-516e470fcb08}</Project>
+      <Name>DDD.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DDD.Infrastructure\DDD.Infrastructure.csproj">
+      <Project>{1a2c8b18-d278-41bb-9433-8cbc0df21982}</Project>
+      <Name>DDD.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

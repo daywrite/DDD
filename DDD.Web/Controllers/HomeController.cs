@@ -8,6 +8,7 @@ using DDD.Application.Imple;
 using DDD.Infrastructure.Caching;
 using log4net;
 using System.Reflection;
+using MongoDB.Driver;
 
 namespace DDD.Web.Controllers
 {
@@ -21,6 +22,17 @@ namespace DDD.Web.Controllers
         }
         public ActionResult Index()
         {
+            //IEnumerable<User> ieUser = _userService.GetAll();
+
+            //string connection = "mongodb://localhost:27017";
+            //MongoClient client = new MongoClient(connection);
+            //MongoServer server = client.GetServer();
+            //MongoDatabase database = server.GetDatabase("DddDbContext");
+
+            //foreach (User u in ieUser)
+            //{
+            //    database.GetCollection<User>(typeof(User).Name).Insert(u);
+            //}        
             
 
             //User u = _userService.GetByKey(new Guid("be8c6f0a-5b11-e411-b59f-446d57c14a18"));

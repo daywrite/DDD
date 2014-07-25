@@ -21,5 +21,10 @@ namespace DDD.Application.Imple
         {
             return _userRepository.GetByKey(id);
         }
+
+        public IEnumerable<User> GetAll()
+        {
+            return _userRepository.GetAll();
+        }
     }
 }

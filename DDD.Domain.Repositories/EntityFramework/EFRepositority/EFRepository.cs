@@ -58,7 +58,7 @@ namespace DDD.Domain.Repositories.EntityFramework
 
         protected override IEnumerable<TEntity> DoGetAll()
         {
-            throw new NotImplementedException();
+            return _efContext.Context.Set<TEntity>();
         }
 
         /// <summary>

@@ -34,11 +34,13 @@ namespace DDD.Web
             //Ioc注入
             var builder = AutofacHelper.RegisterService();
             //MongoDB
-            builder.RegisterType<DDD.Domain.Repositories.MongoDB.MongoDBRepositoryContext>().AsImplementedInterfaces();
-            builder.RegisterType<DDD.Domain.Repositories.MongoDB.UserRepository>().AsImplementedInterfaces();
-            DependencyResolver.SetResolver(new AutofacDependencyResolver(builder.Build()));
+            //builder.RegisterType<DDD.Domain.Repositories.MongoDB.MongoDBRepositoryContext>().AsImplementedInterfaces();
+            //builder.RegisterType<DDD.Domain.Repositories.MongoDB.UserRepository>().AsImplementedInterfaces();
+            //EF
+            builder.RegisterType<DDD.Domain.Repositories.EntityFramework.EFRepositoryContext>().AsImplementedInterfaces();
+            builder.RegisterType<DDD.Domain.Repositories.EntityFramework.UserRepository>().AsImplementedInterfaces();
 
-            MongoDBBootstrapper.Bootstrap();
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(builder.Build()));
         }
     }
 }

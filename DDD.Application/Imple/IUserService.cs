@@ -11,5 +11,7 @@ namespace DDD.Application.Imple
     public interface IUserService : IDependency
     {
         User GetByKey(Guid id);
+
+        IEnumerable<User> GetAll();
     }
 }
