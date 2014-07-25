@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace DDD.Domain.Repositories.MongoDB
 {
-    // ReSharper disable once InconsistentNaming
     public class MongoDBRepositoryContext : RepositoryContext, IMongoDBRepositoryContext
     {
         private readonly MongoServer _server;
@@ -28,21 +27,18 @@ namespace DDD.Domain.Repositories.MongoDB
         }
 
         /// <summary>
-        /// 
+        /// 获取当前集合类型的MongoCollection
         /// </summary>
-        /// <typeparam name="TEntity"></typeparam>
-        /// <param name="type"></param>
-        /// <returns></returns>
+        /// <typeparam name="TEntity">当前实体类型</typeparam>
+        /// <param name="type">类型的Type</param>
+        /// <returns>返回~MongoCollection</returns>
         public MongoCollection GetCollectionForType<TEntity>(Type type)
         {
-            MongoCollection mongoCollection = null;
-            mongoCollection = this._database.GetCollection<TEntity>(type.Name);
-
-            return mongoCollection;
+            return this._database.GetCollection<TEntity>(type.Name);
         }
+
         protected override void Dispose(bool disposing)
         {
-
         }
 
         /// <summary>
@@ -53,7 +49,7 @@ namespace DDD.Domain.Repositories.MongoDB
         /// <param name="entity"> 要注册的对象 </param>
         public override void RegisterNew<TEntity, TKey>(TEntity entity)
         {
-            Committed = false;
+            GetCollectionForType<TEntity>(typeof(TEntity)).Insert(entity);
         }
 
         /// <summary>
@@ -91,6 +87,7 @@ namespace DDD.Domain.Repositories.MongoDB
         }
         protected override void DoCommit()
         {
+
         }
         public override bool DistributedTransactionSupported
         {

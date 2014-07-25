@@ -11,6 +11,7 @@ using DDD.Infrastructure;
 using Autofac;
 using Autofac.Integration.Mvc; 
 using log4net;
+using DDD.Domain.Repositories.MongoDB;
 namespace DDD.Web
 {
     // 注意: 有关启用 IIS6 或 IIS7 经典模式的说明，
@@ -36,6 +37,8 @@ namespace DDD.Web
             builder.RegisterType<DDD.Domain.Repositories.MongoDB.MongoDBRepositoryContext>().AsImplementedInterfaces();
             builder.RegisterType<DDD.Domain.Repositories.MongoDB.UserRepository>().AsImplementedInterfaces();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(builder.Build()));
+
+            MongoDBBootstrapper.Bootstrap();
         }
     }
 }
